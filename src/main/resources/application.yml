@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  #设置ftl文件路径
+  freemarker:
+    template-loader-path: classpath:/templates/
+
+  #设定静态文件路径   比如js、css
+  mvc:
+    static-path-pattern: /static/**
+
+  #数据库配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/companionspace
+    username: root
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true #展示sql
